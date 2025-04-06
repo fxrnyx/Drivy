@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Drivy"
+        tools:targetApi="31">
+
+        <!-- API Key de Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC-YxFoI-TE3tLpoUAh-fFSFXHOqV2RoVw" />
+
+        <activity
+            android:name=".MapsActivity1"
+            android:exported="false"
+            android:label="@string/title_activity_maps1" />
+        <activity
+            android:name=".AnalisisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleVehiculoConductorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".registro_Pasajero"
+            android:exported="false" />
+        <activity
+            android:name=".Datos_PasajeroVerificacion"
+            android:exported="false" />
+        <activity
+            android:name=".Datos_ConductorVerificacion"
+            android:exported="false" />
+        <activity
+            android:name=".Lista_VerificarPasajeros"
+            android:exported="false" />
+        <activity
+            android:name=".Lista_VerificarConductores"
+            android:exported="false" />
+        <activity
+            android:name=".Home_Administrador"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarVehiculoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AgregarParadaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Lista_Vehiculos"
+            android:exported="false" />
+        <activity
+            android:name=".lista_ParadasActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeConductorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetalleRuta"
+            android:exported="false" />
+        <activity
+            android:name=".VerRutasPasajeroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomePasajeroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Registro_Conductor"
+            android:exported="false" />
+        <activity
+            android:name=".eleccionRegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
