@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/flecha_regreso"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back_arrow"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/flecha_regreso">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:id="@+id/linear_layout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/adlam_display"
+                android:text="Agrega los datos de tu parada"
+                android:textSize="25dp"
+                android:textColor="@color/black"
+                android:id="@+id/text_1"
+                android:layout_gravity="center" />
+
+            <!-- Tarjeta con el Mapa y el Buscador -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mapa"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/decoracion_circulos"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- Buscador de direcciones -->
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/searchView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:queryHint="Buscar dirección..."
+                        android:layout_margin="8dp" />
+
+                    <!-- Contenedor del mapa -->
+                    <FrameLayout
+                        android:id="@+id/map_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/searchView"
+                        android:layout_marginTop="8dp">
+
+                        <fragment
+                            android:id="@+id/fragmentMap"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </FrameLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Spinner para seleccionar Horario -->
+            <Spinner
+                android:layout_width="326dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/entradas"
+                android:id="@+id/spinner_horario" />
+
+            <!-- TextView para seleccionar Días de Actividad -->
+            <TextView
+                android:layout_width="326dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/entradas"
+                android:paddingLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="Seleccionar días de actividad"
+                android:textColor="@color/black"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/text_dias_actividad"
+                android:textSize="15dp" />
+
+            <EditText
+                android:layout_width="326dp"
+                android:layout_height="57dp"
+                android:layout_below="@+id/text_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/entradas"
+                android:hint="Referencias"
+                android:paddingLeft="10dp"
+                android:id="@+id/ingresar_referencia"
+                android:fontFamily="@font/adlam_display"
+                android:textSize="15dp"
+                android:layout_gravity="center" />
+
+            <!-- Spinner para seleccionar Tiempo de Tolerancia -->
+            <Spinner
+                android:layout_width="326dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/entradas"
+                android:id="@+id/spinner_tolerancia" />
+
+            <Spinner
+                android:layout_width="326dp"
+                android:layout_height="57dp"
+                android:layout_below="@+id/text_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/entradas"
+                android:hint="Alcaldía"
+                android:paddingLeft="10dp"
+                android:id="@+id/spinner_alcaldia"
+                android:fontFamily="@font/adlam_display"
+                android:textSize="15dp"
+                android:layout_gravity="center" />
+
+            <Spinner
+                android:layout_width="326dp"
+                android:layout_height="57dp"
+                android:layout_below="@+id/text_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_shape"
+                android:backgroundTint="@color/entradas"
+                android:hint="Vehículo"
+                android:paddingLeft="10dp"
+                android:id="@+id/spinner_vehiculo"
+                android:fontFamily="@font/adlam_display"
+                android:textSize="15dp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agregar parada"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/registrar_parada"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+
