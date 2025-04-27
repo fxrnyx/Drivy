@@ -77,6 +77,11 @@
         <activity
             android:name=".HomePasajeroActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".AlcaldiasPasajeroActivity"
+            android:exported="false" />
+
         <activity
             android:name=".Registro_Conductor"
             android:exported="false" />
