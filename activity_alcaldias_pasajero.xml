@@ -1,0 +1,433 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/barra_superior">
+
+
+        <TextView
+            android:id="@+id/nombre_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Hola, Usuario!"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="16dp"
+            android:fontFamily="@font/adlam_display"
+            android:textSize="20dp"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/circulo"
+            android:layout_width="16dp"
+            android:layout_height="15dp"
+            android:src="@drawable/circulo"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:id="@+id/circulo1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/circulo"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:id="@+id/circulo2"
+            android:layout_width="16dp"
+            android:layout_height="15dp"
+            android:src="@drawable/circulo"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="58dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:id="@+id/circulo3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/circulo"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="-28dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="340dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:id="@+id/mapa"
+        android:layout_below="@+id/barra_superior"
+        android:outlineAmbientShadowColor="@color/primaryColor"
+        android:outlineSpotShadowColor="@color/primaryColor"
+        >
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/mapa"/>
+        </FrameLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mapa"
+        android:layout_marginTop="15dp"
+        android:id="@+id/elección_alcaldia"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elige tu alcaldia"
+                android:fontFamily="@font/adlam_display"
+                android:textSize="20dp"
+                android:layout_gravity="center"
+                />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alvaro Obregón"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA1"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Azcapotzalco"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA2"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benito Juarez"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA3"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coyoacan"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA4"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuajimalpa de Morelos"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA5"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cuauhtemoc"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA6"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gutavo A. Madero"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA7"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Iztacalco"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA8"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Iztapalapa"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA9"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Magdalena Contreras"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA10"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Miguel Hidalgo"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA11"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Milpa Alta"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA12"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tlahuac"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA13"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tlalpan"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA14"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Venustiano Carranza"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA15"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xochimilco"
+                android:layout_below="@id/linear_layout"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_shape"
+                android:width="300dp"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:fontFamily="@font/adlam_display"
+                android:id="@+id/boton_ALCALDIA16"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/barra_inferior"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_bar_gradient"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/btn_home">
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/home_icon"
+                android:contentDescription="Inicio" />
+
+
+        </LinearLayout>
+
+        <!-- Segundo botón o icono -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:id="@+id/btn_logout">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/log_out"
+                android:contentDescription="cerrar sesion"
+                android:id="@+id/cerrar_sesion"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
